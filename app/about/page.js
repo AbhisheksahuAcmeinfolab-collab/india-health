@@ -293,9 +293,14 @@ export default function AboutUs() {
             About Us
           </h3>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-snug mt-2">
+            &quot;UNLOCKING THE SECRETS <br className="hidden md:block" />
+            <span className="text-green-600">TO HOLISTIC HEALTH&quot;</span>
+          </h1>
+
+          {/* <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-snug mt-2">
             "UNLOCKING THE SECRETS <br className="hidden md:block" />
             <span className="text-green-600">TO HOLISTIC HEALTH"</span>
-          </h1>
+          </h1> */}
           <p className="mt-6 text-gray-600 text-base md:text-lg leading-relaxed">
             We are dedicated to providing world-class healthcare with
             compassion, innovation, and trust. Our mission is to guide
@@ -377,11 +382,11 @@ export default function AboutUs() {
           Why Us
         </h2>
         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-          As your travel partner for medical care, Indian Health Advisers provide
-          a wide range of services from the state you choose to visit for
-          treatment till you return home in good health. Our only goal is to give
-          you a comfortable setting where you may heal in the best condition
-          possible.
+          As your travel partner for medical care, Indian Health Advisers
+          provide a wide range of services from the state you choose to visit
+          for treatment till you return home in good health. Our only goal is to
+          give you a comfortable setting where you may heal in the best
+          condition possible.
         </p>
 
         <div className="space-y-4">
@@ -413,7 +418,6 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }
