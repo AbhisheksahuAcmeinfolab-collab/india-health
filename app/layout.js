@@ -1,7 +1,7 @@
 // "use client"
 
 import TopHeader from '@/Component/TopHeader';
-import Navbar from '../Component/Navbar';
+import Navbar from '@/Component/Navbar';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
 import Footer from '@/Component/Footer';
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <TopHeader/>
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

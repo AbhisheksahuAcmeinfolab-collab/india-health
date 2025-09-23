@@ -1,11 +1,13 @@
 "use client";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Image from "next/image";
+import img from "../assets/image/health.webp"
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import pic1 from "../assets/icon1.png";
 import pic2 from "../assets/icon2.png";
@@ -15,62 +17,53 @@ export default function Footer() {
     <footer className="bg-gradient-to-r from-blue-950 to-blue-900 text-gray-300">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        {/* Column 1: Logo & About */}
+        {/* Column 1 */}
         <div>
-          <h2 className="text-white text-3xl font-bold mb-4 tracking-wide hover:text-cyan-400 transition-colors">
-            Mediox
-          </h2>
+          <Image
+            src={img}
+            alt="Health India Logo"
+            width={180}
+            height={50}
+            className="rounded-md mb-4"
+          />
+          {/* <h2 className="text-white text-3xl font-bold mb-4 tracking-wide hover:text-cyan-400 transition-colors">
+            INDIAN HEALTH ADVISER
+          </h2> */}
           <p className="mb-4 text-sm leading-relaxed">
-            Morem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elita Florai
-            Psum Dolor Sit Amet, Consecteture.
+            Indian Health Adviser (IHA) is a healthcare facilitator seeking to
+            make health and wellness easier for people of international
+            residents, their families, and their friends.
           </p>
-          <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm shadow-md hover:scale-105 transition-transform">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm shadow-md transition-transform"
+          >
             GET CONSULTANT →
-          </button>
+          </motion.button>
+
+          {/* Social Icons */}
           <div className="flex gap-4 mt-6">
             {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map(
               (Icon, i) => (
-                <a
+                <motion.a
                   key={i}
                   href="#"
-                  className="p-2 rounded-full border border-gray-500 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white transition transform hover:scale-110"
+                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.1 }}
+                  className="p-2 rounded-full border border-gray-500 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white transition"
                 >
                   <Icon size={18} />
-                </a>
+                </motion.a>
               )
             )}
           </div>
         </div>
 
-        {/* Column 2: Our Services */}
+        {/* Column 2 */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-            Our Services
-          </h3>
-          <ul className="space-y-2 text-sm">
-            {[
-              "Cardiology Care",
-              "Urgent Care",
-              "Orthopedic Care",
-              "Neurology Care",
-              "Gynaecologists",
-              "Therapy",
-              "Dental Service",
-            ].map((service, i) => (
-              <li
-                key={i}
-                className="hover:text-cyan-400 cursor-pointer transition-all hover:translate-x-1"
-              >
-                {service}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 3: Useful Links */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-            Useful Links
+            OUR SERVICES
           </h3>
           <ul className="space-y-2 text-sm">
             {[
@@ -81,29 +74,64 @@ export default function Footer() {
               "Appointments",
               "Help & FAQS",
               "Contact Us",
-            ].map((link, i) => (
-              <li
+            ].map((service, i) => (
+              <motion.li
                 key={i}
-                className="hover:text-cyan-400 cursor-pointer transition-all hover:translate-x-1"
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ x: 6, color: "#22d3ee" }}
+                className="cursor-pointer transition-all"
               >
-                {link}
-              </li>
+                {service}
+              </motion.li>
             ))}
           </ul>
         </div>
 
-        {/* Column 4: Recent News */}
+        {/* Column 3 */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-            Recent News
+            QUICK LINKS
+          </h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              "Breast Cancer Treatment",
+              "Brain Tumor Surgery",
+              "Endovascular Aneurysm Repair",
+              "Rhabdomyosarcoma Treatment",
+              "Kidney Transplant",
+              "Liver Transplant",
+              "Oral Cancer",
+            ].map((link, i) => (
+              <motion.li
+                key={i}
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ x: 6, color: "#22d3ee" }}
+                className="cursor-pointer transition-all"
+              >
+                {link}
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 4 */}
+        <div>
+          <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
+            RECENT BLOGS
           </h3>
           <div className="space-y-5">
             {[pic1, pic2].map((img, i) => (
-              <div key={i} className="flex gap-3 group cursor-pointer">
+              <motion.div
+                key={i}
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                className="flex gap-3 group cursor-pointer"
+              >
+                {/* ✅ Use Next.js Image instead of <img> */}
                 <Image
                   src={img}
                   alt="News"
-                  className="w-16 h-16 rounded-md object-cover shadow-md group-hover:scale-105 transition-transform"
+                  className="w-16 h-16 rounded-md object-cover shadow-md transition-transform"
                 />
                 <div>
                   <p className="text-xs text-gray-400 group-hover:text-cyan-400">
@@ -111,11 +139,11 @@ export default function Footer() {
                   </p>
                   <h4 className="text-sm text-white group-hover:text-cyan-400 transition-colors">
                     {i === 0
-                      ? "Collaboratively Pontificate Bleedi Edge Resources"
-                      : "Quick Sync The Horse Is Out Of The Barn, Yet This Vendor"}
+                      ? "Top Medical Procedures International Patients Choose India For"
+                      : "Cancer, Cardiac, and Kidney Care: Why Patients Trust Indian Hospitals"}
                   </h4>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -124,184 +152,27 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="bg-blue-950 py-6 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-center md:text-left">
-          <div className="flex items-center gap-2 justify-center md:justify-start hover:text-cyan-400 transition-colors cursor-pointer">
-            <MdLocationOn className="text-cyan-400 w-5 h-5" />
-            <span>4648 Rocky Road Philadelphia PA, 1920</span>
-          </div>
-          <div className="flex items-center gap-2 justify-center md:justify-start hover:text-cyan-400 transition-colors cursor-pointer">
-            <MdEmail className="text-cyan-400 w-5 h-5" />
-            <span>info@mediox.com</span>
-          </div>
-          <div className="flex items-center gap-2 justify-center md:justify-start hover:text-cyan-400 transition-colors cursor-pointer">
-            <MdPhone className="text-cyan-400 w-5 h-5" />
-            <span>+208-555-0112</span>
-          </div>
+          {[
+            { icon: MdLocationOn, text: "Delhi, India" },
+            { icon: MdEmail, text: "info@ekamcure.com" },
+            { icon: MdPhone, text: "(+91) 9990205353" },
+          ].map(({ icon: Icon, text }, i) => (
+            <motion.div
+              key={i}
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ color: "#22d3ee" }}
+              className="flex items-center gap-2 justify-center md:justify-start cursor-pointer transition-colors"
+            >
+              <Icon className="text-cyan-400 w-5 h-5" />
+              <span>{text}</span>
+            </motion.div>
+          ))}
         </div>
         <p className="text-center text-xs text-gray-400 mt-4">
-          © {new Date().getFullYear()} Mediox. All Rights Reserved.
+          © {new Date().getFullYear()} Heath-Indian Advisor. All Rights
+          Reserved.
         </p>
       </div>
     </footer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Image from "next/image";
-// import {
-//   FaFacebookF,
-//   FaTwitter,
-//   FaInstagram,
-//   FaLinkedinIn,
-// } from "react-icons/fa";
-// import pic1 from "../assets/icon1.png";
-// import pic2 from "../assets/icon2.png";
-// import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
-
-
-
-// export default function Footer() {
-//   return (
-//     <footer className="bg-blue-950 text-gray-300">
-//       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-//         {/* Column 1: Logo & About */}
-//         <div>
-//           <h2 className="text-white text-2xl font-bold mb-4">Mediox</h2>
-//           <p className="mb-4 text-sm">
-//             Morem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elita Florai Psum
-//             Dolor Sit Amet, Consecteture.
-//           </p>
-//           <button className="bg-cyan-500 text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-cyan-600 transition">
-//             GET CONSULTANT →
-//           </button>
-//           <div className="flex gap-4 mt-4">
-//             <a href="#" className="hover:text-cyan-400">
-//               <FaFacebookF size={20} />
-//             </a>
-//             <a href="#" className="hover:text-cyan-400">
-//               <FaTwitter size={20} />
-//             </a>
-//             <a href="#" className="hover:text-cyan-400">
-//               <FaInstagram size={20} />
-//             </a>
-//             <a href="#" className="hover:text-cyan-400">
-//               <FaLinkedinIn size={20} />
-//             </a>
-//           </div>
-//         </div>
-
-//         {/* Column 2: Our Services */}
-//         <div>
-//           <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-//             Our Services
-//           </h3>
-//           <ul className="space-y-2 text-sm">
-//             <li className="hover:text-cyan-400">Cardiology Care</li>
-//             <li className="hover:text-cyan-400">Urgent Care</li>
-//             <li className="hover:text-cyan-400">Orthopedic Care</li>
-//             <li className="hover:text-cyan-400">Neurology Care</li>
-//             <li className="hover:text-cyan-400">Gynaecologists</li>
-//             <li className="hover:text-cyan-400">Therapy</li>
-//             <li className="hover:text-cyan-400">Dental Service</li>
-//           </ul>
-//         </div>
-
-//         {/* Column 3: Useful Links */}
-//         <div>
-//           <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-//             Useful Links
-//           </h3>
-//           <ul className="space-y-2 text-sm">
-//             <li className="hover:text-cyan-400">About Us</li>
-//             <li className="hover:text-cyan-400">Our Services</li>
-//             <li className="hover:text-cyan-400">Our Team</li>
-//             <li className="hover:text-cyan-400">Latest Blog</li>
-//             <li className="hover:text-cyan-400">Appointments</li>
-//             <li className="hover:text-cyan-400">Help & FAQS</li>
-//             <li className="hover:text-cyan-400">Contact Us</li>
-//           </ul>
-//         </div>
-
-//         {/* Column 4: Recent News */}
-//         <div>
-//           <h3 className="text-white text-lg font-semibold mb-4 border-b-2 border-cyan-500 inline-block">
-//             Recent News
-//           </h3>
-//           <div className="space-y-4">
-//             <div className="flex gap-3">
-//               <Image
-//                 src={pic1}
-//                 alt="News"
-//                 className="w-16 h-16 rounded-md object-cover"
-//               />
-//               <div className="hover:text-cyan-400">
-//                 <p className="text-xs text-gray-400 hover:text-cyan-400">
-//                   By Admin • 2 comments
-//                 </p>
-//                 <h4 className="text-sm text-white hover:text-cyan-400 cursor-pointer">
-//                   Collaboratively Pontificate Bleedi Edge Resources
-//                 </h4>
-//               </div>
-//             </div>
-//             <div className="flex gap-3">
-//               <Image
-//                 src={pic2}
-//                 alt="News"
-//                 className="w-16 h-16 rounded-md object-cover"
-//               />
-//               <div>
-//                 <p className="text-xs text-gray-400 hover:text-cyan-400">
-//                   By Admin • 2 comments
-//                 </p>
-//                 <h4 className="text-sm text-white hover:text-cyan-400 cursor-pointer">
-//                   Quick Sync The Horse Is Out Of The Barn, Yet This Vendor
-//                 </h4>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Bottom bar */}
-//       <div className="bg-blue-900 py-6">
-//         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-//           <div className="flex items-center gap-2 hover:text-cyan-400">
-//             <MdLocationOn className="text-cyan-400 w-5 h-5" />
-//             <span>4648 Rocky Road Philadelphia PA, 1920</span>
-//           </div>
-//           <div className="flex items-center gap-2 hover:text-cyan-400">
-//             <MdEmail className="text-cyan-400 w-5 h-5" />
-//             <span>info@mediox.com</span>
-//           </div>
-//           <div className="flex items-center gap-2 hover:text-cyan-400">
-//             <MdPhone className="text-cyan-400 w-5 h-5" />
-//             <span>+208-555-0112</span>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
