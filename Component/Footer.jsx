@@ -7,12 +7,30 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Image from "next/image";
-import img from "../assets/image/health.webp"
+import img from "../assets/image/hello.png";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import pic1 from "../assets/icon1.png";
 import pic2 from "../assets/icon2.png";
 
 export default function Footer() {
+  const infoItems = [
+    {
+      icon: MdLocationOn,
+      label: "Office Address",
+      text: "Delhi, India",
+    },
+    {
+      icon: MdEmail,
+      label: "Send Email",
+      text: "info@ekamcure.com",
+    },
+    {
+      icon: MdPhone,
+      label: "Call Emergency",
+      text: "(+91) 9990205353",
+    },
+  ];
+
   return (
     <footer className="bg-gradient-to-r from-blue-950 to-blue-900 text-gray-300">
       {/* Top Section */}
@@ -22,14 +40,12 @@ export default function Footer() {
           <Image
             src={img}
             alt="Health India Logo"
-            width={180}
+            width={150}
             height={50}
-            className="rounded-md mb-4"
+            className="rounded-md mb-4 py-2"
           />
-          {/* <h2 className="text-white text-3xl font-bold mb-4 tracking-wide hover:text-cyan-400 transition-colors">
-            INDIAN HEALTH ADVISER
-          </h2> */}
-          <p className="mb-4 text-sm leading-relaxed">
+
+          <p className="mb-4 text-sm leading-relaxed hover:bg-cyan-600">
             Indian Health Adviser (IHA) is a healthcare facilitator seeking to
             make health and wellness easier for people of international
             residents, their families, and their friends.
@@ -99,8 +115,11 @@ export default function Footer() {
               "Endovascular Aneurysm Repair",
               "Rhabdomyosarcoma Treatment",
               "Kidney Transplant",
-              "Liver Transplant",
+              "Liver Transplantation",
+              "Heart Transplant",
+              "Bone Marrow Transplants",
               "Oral Cancer",
+              "Top Hospitals",
             ].map((link, i) => (
               <motion.li
                 key={i}
@@ -150,29 +169,63 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-blue-950 py-6 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-center md:text-left">
-          {[
-            { icon: MdLocationOn, text: "Delhi, India" },
-            { icon: MdEmail, text: "info@ekamcure.com" },
-            { icon: MdPhone, text: "(+91) 9990205353" },
-          ].map(({ icon: Icon, text }, i) => (
-            <motion.div
-              key={i}
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ color: "#22d3ee" }}
-              className="flex items-center gap-2 justify-center md:justify-start cursor-pointer transition-colors"
-            >
-              <Icon className="text-cyan-400 w-5 h-5" />
-              <span>{text}</span>
-            </motion.div>
-          ))}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="rounded-3xl bg-gradient-to-r shadow-lg bg-cover bg-center bg-[url('../assets/image/footer-contact-bg.jpg')]">
+          {/* content here */}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/20">
+            {infoItems.map(({ icon: Icon, label, text }, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 p-6 text-black transition transform hover:scale-105 hover:bg-white/10 rounded-3xl md:rounded-none cursor-pointer"
+              >
+                {/* Icon inside circle */}
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 group-hover:bg-white/30 transition">
+                  <Icon className="w-6 h-6 text-aqua" />
+                </div>
+
+                {/* Text Content */}
+                <div>
+                  <p className="text-sm font-semibold">{label}</p>
+                  <p className="text-lg font-bold">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <p className="text-center text-xs text-gray-400 mt-4">
-          © {new Date().getFullYear()} Heath-Indian Advisor. All Rights
-          Reserved.
-        </p>
       </div>
+      <div className="bg-black text-white py-2 mt-4">
+        {/* <div className="first px-4 flex-wrap">
+          <div className="">
+            <span> Terms & Condition | Privacy Policy </span>
+          </div>
+          <div className="">
+            <span>Designed by :- Acme Infolabs</span>
+          </div>
+        </div> */}
+
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm">
+          {/* Left side */}
+          <div className="flex items-center gap-2 text-white-600">
+            <a href="#" className="hover:text-cyan-400">
+              Terms & Conditions
+            </a>
+            <span className="text-white-400">|</span>
+            <a href="#" className="hover:text-cyan-400">
+              Privacy Policy
+            </a>
+          </div>
+
+          {/* Right side */}
+          <div className="text-white mt-2 md:mt-0 hover:text-cyan-400">
+            Designed by{" "}
+            <span className="text-white-600 font-semibold">AcmeInfolabs</span>
+          </div>
+        </div>
+      </div>
+      {/* <p className="text-center text-xs text-white-400 mt-4 font-bold py-2 hover:text-cyan-400">
+        © {new Date().getFullYear()} Heath-India Advisor. All Rights Reserved.
+      </p> */}
     </footer>
   );
 }
