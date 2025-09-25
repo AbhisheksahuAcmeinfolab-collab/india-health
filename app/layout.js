@@ -1,16 +1,15 @@
-// "use client"
+"use client"
 
-import TopHeader from '@/Component/TopHeader';
-import Navbar from '@/Component/Navbar';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import TopHeader from "@/Component/TopHeader";
+import Navbar from "@/Component/Navbar";
 import "./globals.css";
-import Footer from '@/Component/Footer';
+import Footer from "@/Component/Footer";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <TopHeader/>
+        <TopHeader />
         <Navbar />
         {children}
         <Footer />
@@ -18,21 +17,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
