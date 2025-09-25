@@ -5,11 +5,11 @@ import { FaHandshake } from "react-icons/fa";
 export default function TopHeader() {
   return (
     <div
-      className="bg-[#053161] text-white hover:bg-cyan-600 text-sm px-14 py-3"
+      className="bg-[#053161] text-white hover:bg-cyan-600 text-sm px-16 py-3"
       dir="rtl"
     >
-      <div className="flex flex-wrap gap-6 px-12">
-      {/* <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-6 px-4 sm:px-6 lg:px-8"> */}
+      {/* <div className="flex flex-wrap gap-6 px-12"> */}
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-right gap-4 md:gap-6 px-4 sm:px-6 lg:px-8">
         {/* Call / WhatsApp */}
         <div className="flex items-center gap-1 hover:scale-105 transition duration-300 cursor-pointer">
           <span className="font-medium">Call (+91) 9990205353</span>
