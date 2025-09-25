@@ -22,11 +22,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50 py-2">
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-md sticky top-0 z-50 py-3">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4 px-8">
             <Image
               src={img}
               alt="Health India Logo"
@@ -36,7 +36,7 @@ export default function Navbar() {
             />
           </Link>
           {/* show navbar component in mobile devices in sm, md, xl:hidden  */}
-          <div className="hidden xl:flex space-x-8">
+          <div className="hidden xl:flex space-x-10 ">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (

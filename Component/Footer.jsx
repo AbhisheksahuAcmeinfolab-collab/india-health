@@ -45,17 +45,23 @@ export default function Footer() {
             className="rounded-md mb-4 py-2"
           />
 
-          <p className="mb-4 text-sm leading-relaxed hover:bg-cyan-600">
+          <p className="mb-4 text-sm leading-relaxed bg-white hover:bg-cyan-600 transform hover:scale-105 transition-colors duration-500 ease-in-out">
             Indian Health Adviser (IHA) is a healthcare facilitator seeking to
             make health and wellness easier for people of international
             residents, their families, and their friends.
           </p>
+
+          {/* <p className="mb-4 text-sm leading-relaxed hover:bg-cyan-600">
+            Indian Health Adviser (IHA) is a healthcare facilitator seeking to
+            make health and wellness easier for people of international
+            residents, their families, and their friends.
+          </p> */}
           <motion.button
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.05 }}
             className="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm shadow-md transition-transform"
           >
-            GET CONSULTANT →
+            GET CONSULTATION →
           </motion.button>
 
           {/* Social Icons */}
@@ -195,15 +201,6 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-black text-white py-2 mt-4">
-        {/* <div className="first px-4 flex-wrap">
-          <div className="">
-            <span> Terms & Condition | Privacy Policy </span>
-          </div>
-          <div className="">
-            <span>Designed by :- Acme Infolabs</span>
-          </div>
-        </div> */}
-
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm">
           {/* Left side */}
           <div className="flex items-center gap-2 text-white-600">
@@ -223,9 +220,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <p className="text-center text-xs text-white-400 mt-4 font-bold py-2 hover:text-cyan-400">
-        © {new Date().getFullYear()} Heath-India Advisor. All Rights Reserved.
-      </p> */}
     </footer>
   );
 }
