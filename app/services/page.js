@@ -13,7 +13,7 @@ import pic1 from "../../assets/icon/1.png";
 import pic2 from "../../assets/icon/2.png";
 import pic3 from "../../assets/icon/3.png";
 import pic4 from "../../assets/icon/1.png";
-import pic5 from "../../assets/uses/3.png";
+import pic5 from "../../assets/uses/A3.png";
 import pic6 from "../../assets/icon/2.png";
 import pic7 from "../../assets/icon/3.png";
 import pic8 from "../../assets/icon/1.png";
