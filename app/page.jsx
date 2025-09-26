@@ -4,22 +4,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { HeartHandshake, ShieldCheck, Handshake } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaHospital,
-  FaUserMd,
-  FaCalendarAlt,
-  FaStethoscope,
-  FaCheckSquare,
-} from "react-icons/fa";
+import { FaCheckSquare} from "react-icons/fa";
 
-// Import images
-// import pic1 from "@/assets/image/front1.png";
-// import pic2 from "@/assets/image/front2.png";
-// import pic3 from "@/assets/image/front3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-// import Image from "next/image";
-// import { HeartHandshake, ShieldCheck, Handshake } from "lucide-react";
 import pic1 from "../assets/image/front1.png";
 import pic2 from "../assets/image/front2.png";
 import pic3 from "../assets/image/front3.png";
@@ -205,7 +193,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= ICONS ================= */}
+      {/* ================= ICONS =================
       <section className="container mx-auto px-4 py-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {[
           {
@@ -232,7 +220,7 @@ export default function HomePage() {
             </h3>
           </div>
         ))}
-      </section>
+      </section> */}
 
       {/* ================= WELCOME SECTION ================= */}
       <div className="font-sans text-gray-800">

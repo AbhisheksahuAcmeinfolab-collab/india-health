@@ -31,31 +31,41 @@ export default function Footer() {
     },
   ];
 
+  const lines = [
+    "Indian Health Adviser (IHA) is a healthcare facilitator seeking to make health and wellness easier for people of international residents, their families, and their friends.",
+  ];
+
+  // const hoverEffect = {
+  //   whileHover: { scale: 1.05, backgroundColor: "#06b6d4" }, // cyan-500
+  //   transition: { duration: 0.3, ease: "easeInOut" },
+  // };
+
   return (
     <footer className="bg-gradient-to-r from-blue-950 to-blue-900 text-gray-300">
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-2 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Column 1 */}
         <div>
           <Image
             src={img}
             alt="Health India Logo"
-            width={150}
+            width={170}
             height={50}
-            className="rounded-md mb-4 py-2"
+            className="rounded-md mb-2 py-2 "
           />
 
-          <p className="mb-4 text-sm leading-relaxed bg-white hover:bg-cyan-600 transform hover:scale-105 transition-colors duration-500 ease-in-out">
-            Indian Health Adviser (IHA) is a healthcare facilitator seeking to
-            make health and wellness easier for people of international
-            residents, their families, and their friends.
-          </p>
+          <div className="flex flex-col space-y-2 p-4">
+            {lines.map((line, index) => (
+              <motion.p
+                key={index}
+                className="text-sm leading-relaxed bg-transparent p-1 rounded cursor-pointer"
+                // {...hoverEffect}
+              >
+                {line}
+              </motion.p>
+            ))}
+          </div>
 
-          {/* <p className="mb-4 text-sm leading-relaxed hover:bg-cyan-600">
-            Indian Health Adviser (IHA) is a healthcare facilitator seeking to
-            make health and wellness easier for people of international
-            residents, their families, and their friends.
-          </p> */}
           <motion.button
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.05 }}
