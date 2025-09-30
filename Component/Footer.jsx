@@ -7,11 +7,12 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Image from "next/image";
-import img from "../assets/image/hello.png";
+import img from "../assets/newimage/Logo.png";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import pic1 from "../assets/image/F1.png";
 import pic2 from "../assets/image/F2.png";
 import pic3 from "../assets/image/F3.png";
+
 import pic4 from "../assets/image/F4.png";
 
 export default function Footer() {

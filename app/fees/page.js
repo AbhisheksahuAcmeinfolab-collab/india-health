@@ -1,9 +1,8 @@
-
 "use client";
 import Image from "next/image";
-import pic1 from "../../assets/icon/1.png"; 
+import pic1 from "../../assets/icon/1.png";
 import pic2 from "../../assets/icon/2.png";
-import pic3 from "../../assets/icon/3.png"; 
+import pic3 from "../../assets/icon/3.png";
 
 export default function AyurvedaTreatments() {
   const treatments = [
@@ -38,61 +37,57 @@ export default function AyurvedaTreatments() {
     ],
   ];
 
-const cancerTreatments = [
-  [
-  "Rhabdomyosarcoma Treatment",
-  "Robotic Prostate Cancer Surgery",
-  "Pancreatic Cancer Treatment",
-  "Ovarian Cancer Treatment",
-  "Oral Cancer Treatment",
-  "Liver Cancer",
-  "Brain Cancer (Tumour) Treatment",
-  "Prostate Cancer",
-  "Anal Cancer",
-  "Uterine Cancer",
-  ],
-  [
-  "Cervical Cancer",
-  "Gastrointestinal Cancer",
-  "Breast Cancer",
-  "Head And Neck Cancer",
-  "Lung Cancer",
-  "Blood Cancer",
-  "Thyroid Cancer",
-  "Bladder Cancer",
-  "Esophagus Cancer",
-  "Penile Cancer",
-  ],
-  [
-  "Vulvar Cancer",
-  "Primary Bone Cancer",
-  "Vaginal Cancer",
-  "Bone Cancer",
-  "Skin Cancer",
-  "Colon Cancer",
-  "Gallbladder Cancer",
-  "Salivary Cancer",
-  "Bile Duct Cancer",
-  "Nasopharyngeal Cancer",
-  ],
-];
+  const cancerTreatments = [
+    [
+      "Rhabdomyosarcoma Treatment",
+      "Robotic Prostate Cancer Surgery",
+      "Pancreatic Cancer Treatment",
+      "Ovarian Cancer Treatment",
+      "Oral Cancer Treatment",
+      "Liver Cancer",
+      "Brain Cancer (Tumour) Treatment",
+      "Prostate Cancer",
+      "Anal Cancer",
+      "Uterine Cancer",
+    ],
+    [
+      "Cervical Cancer",
+      "Gastrointestinal Cancer",
+      "Breast Cancer",
+      "Head And Neck Cancer",
+      "Lung Cancer",
+      "Blood Cancer",
+      "Thyroid Cancer",
+      "Bladder Cancer",
+      "Esophagus Cancer",
+      "Penile Cancer",
+    ],
+    [
+      "Vulvar Cancer",
+      "Primary Bone Cancer",
+      "Vaginal Cancer",
+      "Bone Cancer",
+      "Skin Cancer",
+      "Colon Cancer",
+      "Gallbladder Cancer",
+      "Salivary Cancer",
+      "Bile Duct Cancer",
+      "Nasopharyngeal Cancer",
+    ],
+  ];
 
-   const hearttreatments = [
+  const hearttreatments = [
     [
-    "Heart Transplant",
-    "Heart Diseases",
-    "Endovascular Aneurysm Repair",
-    "Coronary Heart Diseases",
+      "Heart Transplant",
+      "Heart Diseases",
+      "Endovascular Aneurysm Repair",
+      "Coronary Heart Diseases",
     ],
+    ["Coronary Angioplasty", "Heart Bypass Surgery", "Heart Valve Surgery"],
     [
-    "Coronary Angioplasty",
-    "Heart Bypass Surgery",
-    "Heart Valve Surgery",
-    ],
-    [
-    "Paediatric Heart Surgery",
-    "Robotic Heart Surgery",
-    "Pacemaker Implantation",
+      "Paediatric Heart Surgery",
+      "Robotic Heart Surgery",
+      "Pacemaker Implantation",
     ],
   ];
 
@@ -119,9 +114,12 @@ const cancerTreatments = [
                     key={j}
                     className="text-blue-600 hover:text-red-800 cursor-pointer transition"
                   >
-                     <a href="https://dictionary.cambridge.org/dictionary/english/treatment" className="text-sm md:text-base">
-                    • {item}
-                  </a>
+                    <a
+                      href="https://dictionary.cambridge.org/dictionary/english/treatment"
+                      className="text-sm md:text-base"
+                    >
+                      • {item}
+                    </a>
                     {/* • {item} */}
                   </li>
                 ))}

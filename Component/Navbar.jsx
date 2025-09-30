@@ -1,6 +1,6 @@
 "use client";
 
-import img from "../assets/image/health.trans.png";
+import img from "../assets/newimage/Logo.png";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,12 +13,12 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Treatment", href: "/treatment" },
-    { name: "Top Hospitals", href: "/hospitals" },
-    { name: "Top Doctors", href: "/doctors" },
-    { name: "Blogs", href: "/blogs" },
+    { name: "Our Services", href: "/services" },
+    { name: "Our Fees", href: "/fees" },
     { name: "Contact", href: "/contact" },
+    // { name: "Top Hospitals", href: "/hospitals" },
+    // { name: "Top Doctors", href: "/doctors" },
+    // { name: "Blogs", href: "/blogs" },
   ];
 
   return (
@@ -30,7 +30,7 @@ export default function Navbar() {
             <Image
               src={img}
               alt="Health India Logo"
-              width={170}
+              width={120}
               height={50}
               className="rounded-md"
             />
