@@ -16,9 +16,9 @@ export default function Navbar() {
     { name: "Our Services", href: "/services" },
     { name: "Our Fees", href: "/fees" },
     { name: "Contact", href: "/contact" },
-    // { name: "Top Hospitals", href: "/hospitals" },
-    // { name: "Top Doctors", href: "/doctors" },
-    // { name: "Blogs", href: "/blogs" },
+    { name: "Top Hospitals", href: "/hospitals" },
+    { name: "Top Doctors", href: "/doctors" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   return (
